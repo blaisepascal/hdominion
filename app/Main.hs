@@ -1,6 +1,7 @@
 module Main where
 
-import Lib
+import           Card.Base
+import           Cards
 
 main :: IO ()
-main = someFunc
+main = putStrLn $ display curseCard

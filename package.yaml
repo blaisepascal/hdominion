@@ -24,12 +24,16 @@ dependencies:
 
 library:
   source-dirs: src
+  dependencies:
+    - interpolate
+    - lens
 
 executables:
   hdominion-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
+    - -Wall
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
