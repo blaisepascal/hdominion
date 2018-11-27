@@ -20,6 +20,7 @@ import Data.List
 import Data.String.Interpolate
 
 import Cards
+import Utils
 
 data Mat = Mat
   { _deck     :: [Card]
@@ -33,9 +34,6 @@ data Mat = Mat
   }
 
 makeLenses ''Mat
-
-displayList :: (a -> String) -> [a] -> String
-displayList displayElement = intercalate "\n" . map displayElement
 
 display :: Mat -> String
 display (Mat {..}) =
